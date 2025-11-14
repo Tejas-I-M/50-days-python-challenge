@@ -10,7 +10,6 @@ TASK_FILE = "tasks.json"
 
 
 def load_tasks():
-    """Load tasks from JSON file; return empty list if file doesn't exist."""
     if not os.path.exists(TASK_FILE):
         return []
     try:
@@ -21,7 +20,6 @@ def load_tasks():
 
 
 def save_tasks(tasks):
-    """Save current tasks list back to JSON file."""
     with open(TASK_FILE, "w") as f:
         json.dump(tasks, f, indent=4)
 
